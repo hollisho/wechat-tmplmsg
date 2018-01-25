@@ -2,10 +2,11 @@
 
 namespace WechatPush;
 
+
 use WechatPush\lib\HttpRequest;
 use WechatPush\lib\PushClient;
 
-class WechatPush extends PushClient
+class AppletPush extends PushClient
 {
     /**
      * 发送自定义的模板消息
@@ -13,23 +14,26 @@ class WechatPush extends PushClient
      * @param $toUser
      * @param $templateId
      * @param $url
+     * @param $formId
      * @param $data
      * @param string $topcolor
      * @return bool
      */
-    public function send($toUser, $templateId, $url, $data, $topcolor = '#7B68EE')
+    public function send($toUser, $templateId, $url, $formId, $data, $topcolor = '#7B68EE')
     {
         $template = [
             'touser' => $toUser,
             'template_id' => $templateId,
-            'url' => $url,
-            'topcolor' => $topcolor,
+            'page' => $url,
+            'form_id' => $formId,
+            'color' => $topcolor,
             'data' => $data
         ];
         $jsonTemplate = json_encode($template);
-        $url = sprintf("https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=%s", $this->accessToken);
+        $url = sprintf("https://api.weixin.qq.com/cgi-bin/message/wxopen/template/send?access_token=%s", $this->accessToken);
         $dataRes = HttpRequest::http_post($url, urldecode($jsonTemplate));
-        if ($dataRes['errcode'] == 0) {
+        $result = json_decode($dataRes, true);
+        if ($result['errcode'] == 0) {
             return true;
         } else {
             return false;
