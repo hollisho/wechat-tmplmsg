@@ -5,5 +5,5 @@
 Run the command below to install via Composer
 
 ```shell
-composer require hollisho/wechat-tmplmsg
+composer require --prefer-dist hollisho/wechat-tmplmsg
 ```
