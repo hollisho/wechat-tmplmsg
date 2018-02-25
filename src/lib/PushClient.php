@@ -1,8 +1,12 @@
 <?php
 
-namespace hollisho\WechatPush\lib;
+namespace hollisho\wechatmsg\lib;
 
-
+/**
+ * Class PushClient
+ * @package hollisho\wechatmsg\lib
+ * @author Hollis Ho
+ */
 class PushClient
 {
     protected $appId;

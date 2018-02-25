@@ -1,10 +1,10 @@
 <?php
 
-namespace hollisho\WechatPush\lib;
+namespace hollisho\wechatmsg\lib;
 
 /**
  * Class ErrorCode
- * @package WechatPush\lib
+ * @package hollisho\wechatmsg\lib
  * @author Hollis Ho
  */
 class ErrorCode

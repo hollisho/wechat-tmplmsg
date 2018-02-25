@@ -1,10 +1,15 @@
 <?php
 
-namespace hollisho\WechatPush;
+namespace hollisho\wechatmsg;
 
-use WechatPush\lib\HttpRequest;
-use WechatPush\lib\PushClient;
+use hollisho\wechatmsg\lib\HttpRequest;
+use hollisho\wechatmsg\lib\PushClient;
 
+/**
+ * Class WechatPush
+ * @package hollisho\wechatmsg
+ * @author Hollis Ho
+ */
 class WechatPush extends PushClient
 {
     /**

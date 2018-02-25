@@ -1,10 +1,10 @@
 <?php
 
-namespace hollisho\WechatPush\lib;
+namespace hollisho\wechatmsg\lib;
 
 /**
  * Class AccessToken
- * @package WechatPush\lib
+ * @package hollisho\wechatmsg\lib
  * @author Hollis Ho
  */
 class AccessToken

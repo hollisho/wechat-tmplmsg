@@ -1,12 +1,12 @@
 <?php
 
-namespace hollisho\WechatPush\lib;
+namespace hollisho\wechatmsg\lib;
 
 
 /**
  * Http请求类
  * Class HttpRequest
- * @package WechatPush
+ * @package hollisho\wechatmsg\lib
  * @author Hollis Ho
  */
 class HttpRequest
