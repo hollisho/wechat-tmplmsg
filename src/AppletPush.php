@@ -1,6 +1,6 @@
 <?php
 
-namespace WechatPush;
+namespace hollisho\WechatPush;
 
 
 use WechatPush\lib\HttpRequest;
