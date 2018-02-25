@@ -1,6 +1,6 @@
 <?php
 
-namespace WechatPush\lib;
+namespace hollis\WechatPush\lib;
 
 /**
  * Class AccessToken
