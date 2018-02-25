@@ -1,6 +1,6 @@
 <?php
 
-namespace WechatPush\lib;
+namespace hollisho\WechatPush\lib;
 
 /**
  * Class ErrorCode
