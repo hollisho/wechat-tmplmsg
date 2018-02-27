@@ -23,9 +23,10 @@ class AppletPush extends PushClient
      * @param $formId
      * @param $data
      * @param string $topcolor
+     * @param string $errMsg
      * @return bool
      */
-    public function send($toUser, $templateId, $url, $formId, $data, $topcolor = '#7B68EE')
+    public function send($toUser, $templateId, $url, $formId, $data, $topcolor = '#7B68EE', &$errMsg = '')
     {
         $template = [
             'touser' => $toUser,
@@ -42,6 +43,7 @@ class AppletPush extends PushClient
         if ($result['errcode'] == 0) {
             return true;
         } else {
+            $errMsg = $result['errmsg'];
             return false;
         }
     }
