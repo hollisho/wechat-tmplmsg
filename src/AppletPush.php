@@ -23,10 +23,9 @@ class AppletPush extends PushClient
      * @param $formId
      * @param $data
      * @param string $topcolor
-     * @param string $errMsg
      * @return bool
      */
-    public function send($toUser, $templateId, $url, $formId, $data, $topcolor = '#7B68EE', &$errMsg = '')
+    public function send($toUser, $templateId, $url, $formId, $data, $topcolor = '#7B68EE')
     {
         $template = [
             'touser' => $toUser,
