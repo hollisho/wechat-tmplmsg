@@ -22,7 +22,7 @@ class WechatPush extends PushClient
      * @param string $topcolor
      * @return bool
      */
-    public function send($toUser, $templateId, $url, $data, $topcolor = '#7B68EE', &$errMsg = '')
+    public function send($toUser, $templateId, $url, $data, $topcolor = '#7B68EE')
     {
         $template = [
             'touser' => $toUser,
@@ -33,12 +33,6 @@ class WechatPush extends PushClient
         ];
         $jsonTemplate = json_encode($template);
         $url = sprintf("https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=%s", $this->accessToken);
-        $result = HttpRequest::http_post($url, urldecode($jsonTemplate));
-        if ($result['errcode'] == 0) {
-            return true;
-        } else {
-            $errMsg = $result['errmsg'];
-            return false;
-        }
+        return HttpRequest::http_post($url, urldecode($jsonTemplate));
     }
 }
