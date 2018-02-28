@@ -36,7 +36,7 @@ class AppletPush extends PushClient
             'data' => $data
         ];
         $jsonTemplate = json_encode($template);
-        $url = sprintf("https://api.weixin.qq.com/cgi-bin/message/wxopen/template/send?access_token=%s", $this->accessToken);
+        $url = sprintf("https://api.weixin.qq.com/cgi-bin/message/wxopen/template/send?access_token=%s", $this->getAccessToken());
         $dataRes = HttpRequest::http_post($url, urldecode($jsonTemplate));
         return json_decode($dataRes, true);
     }
