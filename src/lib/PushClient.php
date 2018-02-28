@@ -16,8 +16,8 @@ class PushClient
     public function __construct($appId, $appSecret)
     {
         if ($appId && $appSecret) {
-            $this->appid = $appId;
-            $this->secret = $appSecret;
+            $this->appId = $appId;
+            $this->appSecret = $appSecret;
         }
 
     }
