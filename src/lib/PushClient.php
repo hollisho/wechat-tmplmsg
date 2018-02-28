@@ -11,14 +11,13 @@ class PushClient
 {
     protected $appId;
     protected $appSecret;
-    protected $accessToken;
+    public $accessToken;
 
     public function __construct($appId, $appSecret)
     {
         if ($appId && $appSecret) {
             $this->appid = $appId;
             $this->secret = $appSecret;
-            $this->accessToken = AccessToken::getMpToken($appId, $appSecret);
         }
 
     }
