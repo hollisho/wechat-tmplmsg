@@ -22,6 +22,10 @@ class PushClient
         }
 
     }
+    
+    public function getAccessToken() {
+        return $this->accessToken ? $this->accessToken : AccessToken::getMpToken($this->appId, $this->appSecret);
+    }
 
     /**
      * @author Hollis Ho <he_wenzhi@126.com>
